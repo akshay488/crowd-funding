@@ -1,0 +1,252 @@
+
+
+html{
+  font-size: 10px;
+  font-family: 'Commissioner', sans-serif;
+
+}
+h1,h2,h3{
+  padding-bottom: 1vh ;
+}
+
+h1,h2{
+  font-size:2vh;
+}
+h3{
+  font-size: 2.5vh;
+}
+
+p{
+  font-size: 1.4vh;
+  padding-bottom: 1vh;
+  line-height: 1.6;
+}
+body{
+  box-sizing: border-box;
+
+}
+*,*::before,*::after{
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+header{
+  background: url(images/image-hero-desktop.jpg);
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width:100vw;
+  height:27.7vw;
+  color:white;
+}
+
+.nav{
+  display:flex;
+  height: calc(16px + 10vw);
+  width:80%;
+  margin: 0 auto;
+ align-items: center;
+
+}
+.nav .icon{
+  width:100%;
+
+  cursor: pointer;
+
+  }
+  .nav .menu{
+    width:100%;
+    }
+  .logo{
+  height: auto;
+  width:20vw;
+  }
+  
+.nav-block{
+
+  display:flex;
+  text-align: center;
+  font-size: 2rem;
+}
+.nav-block div{
+  flex: 1;
+  cursor: pointer;
+}
+.nav-block div:hover{
+  transform: translateY(-5px);
+
+}
+
+.menu .menu_btn,
+.nav-block .close_btn{
+  display:none;
+}
+/* crowd funding content */
+.logo-1{
+
+  background:url(images/logo-mastercraft.svg);
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-origin: padding-box;
+  width:5vw;
+  height:5vw;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: -5vw;
+}
+.bkmk{
+  background:url(images/icon-bookmark.svg);
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-position: center left;
+  text-align: center;
+  width: 5vw;
+  height:5vw;
+  border-radius: 50%;
+}
+
+/* main-grid */
+.wrapper{
+    background-color: #ddd;
+    display: grid;
+    grid-template-columns: repeat(5,auto);
+    grid-template-rows: repeat(14,auto);
+    grid-row-gap: 10px;
+}
+/* main page */
+
+.wrapper .main,.stats,.about{
+  background-color: #fff;
+  border-radius: 10px;
+
+}
+.header{
+
+  grid-column:1/span 5 ;
+      grid-row:1/span 3;
+
+}
+.main{
+  text-align: center;
+  grid-column: 2/span 3;
+    grid-row:3/span 3;
+    padding: 3vw;
+  }
+.stats{
+  grid-column:2/span 3 ;
+      grid-row:7/span 2;
+      padding: 3vw;
+}
+.about{
+  grid-column: 2/span 3;
+      grid-row:10/span 3;
+      padding: 3vw;
+}
+/* backing buttons */
+.main{
+  display:grid;
+  grid-template-columns: repeat(4,auto);
+  grid-template-rows: repeat(4,auto);
+ grid-gap: 10px;
+  justify-content: space-between;
+  align-content: space-between;
+}
+.main .logo_container{
+  grid-column:1/span 4;
+  grid-row: 1/1;
+}
+.main .intro{
+  grid-column: 1/span 4;
+  grid-row: 2/2;
+}
+.main .para{
+  grid-column: 1/span 4;
+  grid-row: 3/3;
+}
+.main .bkmk_btn{
+  display: inline-flex;
+  border-radius: 3rem;
+  background-color: #eee;
+  grid-column: 3/span 2;
+  grid-row: 4/4;
+}
+.bkmk_btn>p{
+  flex-grow:1;
+margin: auto 0;
+
+}
+.main .backing{
+    grid-column:1/span 2;
+    grid-row: 4/4;
+}
+ /* STATS */
+.stats-container{
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(1,1fr);
+   grid-column-gap: 10px;
+    justify-content: space-between;
+    align-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.stats-container div{
+  border-right: 1px solid #ddd;
+}
+.stats-container div:last-child{
+  border-right:none;
+}
+/* about */
+
+.about{
+  display: flex;
+  flex-direction: column;
+
+}
+.about div:first-child{
+  border:none;
+}
+.about .pledge{
+  margin-bottom: 1rem;
+  border:1px solid #bbb;
+  border-radius: 10px;
+}
+/* thanks */
+.thanks{
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width:100vw;
+  background-color:rgba(0,0,0,0.5);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.thanks_content{
+  font-size: 2rem;
+  padding: 2vh;
+  text-align: center;
+  border-radius:1rem;
+  background-color: #fff;
+  margin: 0 auto;
+  margin-top: 5%;
+  height:auto;
+  width:50%;
+
+}
+.pic{
+  background: url(images/icon-check.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width:8vw;
+  height: 8vw;
+  border-radius: 50%;
+  margin: auto;
+  }
+.thanks_content >.text,button{
+padding: 20px;
+}

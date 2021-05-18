@@ -1,0 +1,257 @@
+
+:root{
+  --moderateCyan: hsl(176, 50%, 47%);
+  --darkCyan: hsl(176, 72%, 28%);
+  --black: hsl(0, 0%, 0%);
+  --darkGray: hsl(0, 0%, 48%);
+}
+
+
+
+/* custom radio button */
+
+
+input[type="radio"]{
+  display: none;
+}
+label{
+
+  position: relative;
+  cursor: pointer;
+}
+label::before{
+  content:"";
+  width: 30px;
+  height:30px;
+  border: 2px solid #ddd;;
+  display: inline-block;
+  margin: -8px 20px;
+  margin-left: 0;
+  border-radius: 50%;
+}
+label::after{
+  content:"";
+  position: absolute;
+  left: 5px;
+  top:10px;
+  width: 20px;
+  height: 20px;
+  background-color:var(--moderateCyan);
+  display: inline-block;
+  margin: -7.5px 20px;
+  margin-left: 0;
+  border-radius: 50%;
+  opacity:0;
+  transition: .4s all linear;
+}
+input[type="radio"]:checked + label::after{
+  opacity:1;
+}
+
+
+.form_label{
+  display:inline-flex;
+  gap:10px;
+}
+.form_label p{
+  color:var(--moderateCyan);
+}
+.form_label h3:hover{
+  color:var(--moderateCyan);
+}
+.card_1  h3:hover{
+  color:var(--moderateCyan);
+}
+/* popup form */
+.template{
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width:100vw;
+  background-color:rgba(0,0,0,0.5);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  display:none;
+  overflow: auto;
+}
+.form-container{
+  font-size: 2rem;
+  padding: 2vh;
+position: relative;
+  border-radius: 1rem;
+  background-color: #fff;
+  margin: 0 auto;
+  margin-top: 5%;
+  height:auto;
+  width:70%;
+
+}
+
+.form-container .close_btn{
+  position: absolute;
+  right:2vh;
+  top:2vh;
+  background: url(images/icon-close-modal.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.pledges{
+  display: grid;
+  grid-template-columns:repeat(4, auto);
+  grid-template-rows:repeat(4, auto);
+
+}
+.card_1,.card_2,.card_3,.card_4{
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 1rem;
+}
+.card_4{
+  margin-bottom: none;
+  opacity: 0.5;
+}
+.list-1{
+  grid-column: 1/span 2;
+  grid-row:1/1;
+}
+.list-2{
+grid-column: 1/span 4;
+grid-row:2/2;
+}
+.list-3{
+grid-column: 4/4;
+grid-row:1/1;
+}
+.list-4{
+grid-column:1/span 4;
+grid-row:4/4;
+display: none;
+border-top: 1px solid #ddd;
+}
+
+/* main page pledge */
+.pledge{
+  display: grid;
+  grid-template-columns:repeat(3, 1fr);
+  grid-template-rows:repeat(3, 1fr);
+  grid-gap: 1rem;
+  padding: 1rem;
+}
+
+.pledge .hd1{
+  display: flex;
+  flex-direction: row;
+  grid-column:1/span 3;
+  grid-row: 1/1;
+}
+.hd1 p{
+  text-align: right;
+  color: var(--moderateCyan);
+}
+
+.pledge .hd1 > *{
+  flex:1;
+
+}
+.pledge .ctnt{
+  grid-column:1/span 3;
+  grid-row: 2/2;
+}
+.pledge .ftr{
+  grid-column:1/1;
+  grid-row: 3/span 1;
+}
+ .pledge .reward {
+  grid-column:3/3;
+  grid-row: 3/3;}
+
+  .about div:last-child{
+    opacity: 0.5;
+  }
+  .button{
+  background-color: var(--moderateCyan); /* Green */
+  border: none;
+  color: white;
+  padding: 20px;
+  font-size: 1.4vh;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 3rem;
+}
+
+.grey_button{
+background-color:#aaa;
+border: none;
+color: white;
+padding: 20px;
+font-size: 1.4vw;
+text-align: center;
+text-decoration: none;
+cursor: pointer;
+border-radius: 3rem;
+}
+.pledge .button:hover{
+  background-color: var(--darkCyan);
+}
+
+/* pledges */
+
+.list-4 button{
+  width: 20%;
+}
+
+
+input[type="text"]{
+  display: inline-block;
+  width:60%;
+  border: none;
+  outline:none;
+  padding: 2rem;
+}
+
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+
+input[type="number"]{
+display:inline-block;
+padding:20px;
+font-size: 1.5rem;
+  width:15%;
+background-image: url(images/doller.png);
+background-repeat: no-repeat;
+background-position:left;
+background-size: 2rem;
+text-align: center;
+border: 1px solid #ddd;
+border-radius: 3rem;
+  outline:none;
+  }
+
+
+
+  input[type="number"]:hover{
+    border: 1px solid var(--moderateCyan);
+  }
+
+  .button:hover{
+    background-color: var(--darkCyan);
+  }
+/* bookmark-cyan */
+/* <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56"><g fill="none"><circle cx="28" cy="28" r="28" fill="hsl(176, 72%, 28%)"/><path d="M23 19v18l5-5.1L33 37V19z" fill="#fff"/></g></svg> */

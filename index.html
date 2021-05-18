@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="specific.css">
+<link rel="stylesheet" href="mediaQuery.css">
+<!-- <link rel="stylesheet" href="g-style.css"> -->
+  <title>Frontend Mentor | Crowdfunding product page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <main class="wrapper">
+    <!-- header -->
+    <header class="header">
+        <!-- <picture>
+  <source media="(min-width:1000px)" srcset="images/image-hero-desktop.jpg">
+  <source media="(min-width:700px)" srcset="images/image-hero-mobile.jpg" >
+    <img src="images/image-hero-desktop.jpg" alt="">
+        </picture> -->
+
+<div class="nav">
+    <div class="icon">
+      <img src="images/logo.svg" alt="logo" width="50%">
+</div>
+
+<div class="menu" id="menu">
+
+  <div class="menu_btn" id="openMenu"></div>
+
+  <div class="nav-block" id="myNav">
+
+    <div class="close_btn" id="closeMenu"></div>
+    <div class="">About </div>
+    <div class=""> Discover </div>
+    <div class="">Get Started </div>
+  </div>
+</div>
+</div>
+</header>
+<!-- main -->
+<!-- Mastercraft Bamboo Monitor -->
+<section class="main" id="main">
+
+  <div class="logo_container">
+
+    <div class="logo-1">
+
+    </div>
+  </div>
+
+      <div class="intro">
+        <h1> Mastercraft Bamboo Monitor Riser</h1>
+      </div>
+        <div class="para">
+          <p>A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
+        </div>
+
+      <button type="button" class="button backing" id="form" onclick="openPages(this)">Back this project</button>
+      <div class="bkmk_btn">
+        <div class="bkmk" >
+
+        </div>
+        <p >Bookmark</p>
+      </div>
+
+
+
+</section>
+
+<!-- stats -->
+
+<section class="stats">
+  <div class="stats-container">
+    <div class=""> <h3>  $89,914 </h3><p>of $100,000 backed</p> </div>
+    <div class=""> <h3>5,007 </h3><p>total backers</p> </div>
+    <div class=""> <h3>56 </h3><p>days left</p> </div>
+  </div>
+  <div style="background:#eee; width:100%;border-radius:10px;">
+    <div style="background:hsl(176, 50%, 47%); width:80%; padding:1vw;border-radius:10px;">
+
+    </div>
+  </div>
+</section>
+<!-- about -->
+
+<section class="about">
+  <div class="about-project">
+    <h2>About this project</h2>
+
+    <p>The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform that elevates your screen
+    to a more comfortable viewing height. Placing your monitor at eye level has the potential to improve
+    your posture and make you more comfortable while at work, helping you stay focused on the task at hand.
+  </p><br>
+    <p>Featuring artisan craftsmanship, the simplicity of design creates extra desk space below your computer
+    to allow notepads, pens, and USB sticks to be stored under the stand.
+    </p>
+  </div>
+<div class="pledge">
+  <div class="hd1">
+    <h2>Bamboo Stand</h2>
+  <p>  Pledge $25 or more</p>
+</div>
+  <div class="ctnt">
+    <p>You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and
+    you’ll be added to a special Backer member list.</p>
+  </div>
+<div class="ftr">
+  <h3 style="display:inline-block;">101</h3>  <span style="font-size:1.5rem; color:#bbb">left</span>
+</div>
+<button class="button reward" name="button" id="bamboo" onclick="tanq(this)">Select Reward</button>
+</div>
+
+<div class="pledge">
+<div class="hd1">
+   <h2>Black Edition Stand</h2>
+  <p> Pledge $75 or more</p>
+</div>
+  <div class="ctnt">
+    <p>You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
+    member list. Shipping is included.</p>
+  </div>
+<div class="ftr">
+  <h3 style="display:inline-block;">64</h3>  <span style="font-size:1.5rem; color:#bbb">left</span>
+</div>
+<button class="button reward" name="button">Select Reward</button>
+</div>
+
+<div class="pledge">
+  <div class="hd1">
+    <h2>Mahogany Special Edition</h2>
+  <p>Pledge $200 or more</p>
+</div>
+  <div class="ctnt">
+    <p>You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
+    to our Backer member list. Shipping is included.</p>
+  </div>
+<div class="ftr">
+  <h3 style="display:inline-block;">0</h3>  <span style="font-size:1.5rem; color:#bbb">left</span>
+</div>
+<button class="grey_button reward" name="button">Out of Stock</button>
+</div>
+</section>
+</main>
+
+
+
+
+
+
+<!-- pledge form -->
+<div id="myForm" class="template" >
+  <form  class="form-container" action="doSomeThing.php" method="post"
+  onSubmit="myButton.disabled = true; return true;">
+
+<div>
+<div class="close_btn" id="close_btn" onclick="closePages(this)">
+
+  </div>
+      <div class="">
+        <h3>Back this project</h3>
+        <p>Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
+      </div>
+
+
+        <!-- card_1 -->
+     <div class="card_1" id="input_1">
+        <div class="">
+          <input type="radio" name="e" id="a">
+          <label for="a"></label>
+            <div style="display:inline-block">
+              <h3>Pledge with no reward</h3>
+           </div>
+
+        </div>
+       <div class="">
+         <p>Choose to support us without a reward if you simply believe in our project. As a backer,
+             you will be signed up to receive product updates via email.</p>
+       </div>
+   </div>
+  <!-- card_2 -->
+  <div class="card_2 pledges" id="input_2">
+
+   <div class="list-1 form_label">
+     <input type="radio" name="e" id="b" >
+     <label for="b"></label>
+       <div  class="form_label">
+         <h3>Bamboo Stand</h3>
+         <p>Pledge $25 or more</p>
+     </div>
+
+   </div>
+
+   <div class="list-2"><p>You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and
+     you’ll be added to a special Backer member list.</p>
+   </div>
+
+     <div class="list-3">
+       <h3 style="display:inline-block">101</h3>
+       <span style="font-size:1.5rem; color:#bbb">left</span>
+   </div>
+
+   <div class="list-4" id="enter_0">
+    <input type="text"  class="inpuText" placeholder="Enter your pledge.." name="text">
+    <input type="number" name="pledge" class="number-input" value="25" min="25">
+    <button  class="button" type="submit" id="submit" onclick="openPages(this)">continue</button>
+  </div>
+  </div>
+  <!-- card_3 -->
+   <div class="card_3 pledges" id="input_3">
+     <div class="list-1" >
+       <input type="radio" name="e" id="c" >
+       <label for="c"></label>
+         <div  class="form_label">
+           <h3>Black Edition Stand</h3>
+         <p>Pledge $75 or more</p>
+       </div>
+
+         </div>
+
+       <div class="list-2">
+         <p>You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
+           member list. Shipping is included.</p>
+       </div>
+       <div class="list-3">
+         <h3 style="display:inline-block">64</h3>  <span style="font-size:1.5rem; color:#bbb">left</span>
+       </div>
+       <div class="list-4" id="enter_1">
+        <input type="text" name="text" class="inpuText" placeholder="Enter your pledge..">
+
+         <input type="number" name="pledge" value="75" min="75">
+         <button  class="button" type="submit" id="submit" onclick="openPages(this)">continue</button>
+       </div>
+   </div>
+
+  <!-- card_4 -->
+   <div class="card_4  pledges">
+     <div class="list-1">
+       <input type="radio" name="e" id="d" disabled>
+       <label for="d"></label>
+         <div class="form_label">
+           <h3>Mahogany Special Edition</h3>
+           <p>Pledge $200 or more</p>
+         </div>
+     </div>
+     <div class="list-2">
+       <p>You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
+       to our Backer member list. Shipping is included.</p>
+     </div>
+   <div class="list-3"><h3 style="display:inline-block">0</h3>
+     <span style="font-size:1.5rem; color:#bbb">left</span></div>
+   <div class="list-4">
+    <input type="text" class="inpuText" placeholder="Enter your pledge.." name="text">
+     <input type="number" name="pledge" value="200" min="200">
+     <button  name="myButton" type="submit" id="submit" onclick="openPages(this)">continue</button>
+   </div>
+
+   </div>
+ </div>
+        </form>
+
+      </div>
+
+
+
+
+<div class="thanks" id="thanks" >
+  <div class="thanks_content">
+    <div class="pic">
+
+    </div>
+    <div class="text">
+      <h3>Thanks for your support!</h3>
+      <p>Your pledge brings us one step closer to sharing Mastercraft <br>
+        Bamboo Monitor Riser worldwide. You will get
+      an email once <br>
+       our campaign is completed.</p>
+    </div>
+    <button type="button" class="button" id="got_it" onclick="closepages(this)">Got it!</button>
+  </div>
+</div>
+
+<script src="index.js">
+</script>
+
+<script>
+  document.getElementById('myForm').addEventListener("change",function(e){
+    let target = e.target;
+
+                let x = target.id;
+
+                if (x=="a") {
+        document.getElementById('input_1').style.border = "1px solid var(--moderateCyan)";
+
+      }
+      else {
+        document.getElementById('input_1').style.border = "1px solid #ddd";
+
+      }
+
+      if (x=="b") {
+        document.getElementById('input_2').style.border = "1px solid var(--moderateCyan)";
+        document.getElementById('enter_0').style.display = "block";
+
+      }
+      else {
+        document.getElementById('input_2').style.border = "1px solid #ddd";
+        document.getElementById('enter_0').style.display = "none";
+
+      }
+
+      if (x=="c") {
+        document.getElementById('input_3').style.border = "1px solid var(--moderateCyan)";
+        document.getElementById('enter_1').style.display = "block";
+
+      }
+      else {
+        document.getElementById('input_3').style.border = "1px solid #ddd";
+        document.getElementById('enter_1').style.display = "none";
+
+      }
+
+});
+
+document.getElementById('menu').addEventListener("click",function(e){
+  let target = e.target;
+
+              let x = target.id;
+              console.log(x);
+              switch (x) {
+                case 'openMenu': document.getElementById('myNav').style.display = "block";
+
+                  break;
+                  case 'closeMenu':document.getElementById('myNav').style.display = "none";
+
+                    break;
+}
+});
+</script>
+
+</body>
+</html>
