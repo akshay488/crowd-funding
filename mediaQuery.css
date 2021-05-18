@@ -59,11 +59,16 @@
     border-bottom: 1px solid #ddd;
     padding:2rem;
   }
+  .nav-block div:hover{
+    transform: none;
+    background-color: #aaa;
+    color: #fff;
+  }
   .nav-block div:last-child{
     border:none;
   }
   .nav-block div:first-child{
-    transform: none;
+
     border:none;
     padding: 0;
   }

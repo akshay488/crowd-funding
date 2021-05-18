@@ -36,11 +36,11 @@
 
 <div class="menu" id="menu">
 
-  <div class="menu_btn" id="openMenu"></div>
+  <div class="menu_btn" id="openMenu" onclick="openPages(this)"></div>
 
   <div class="nav-block" id="myNav">
 
-    <div class="close_btn" id="closeMenu"></div>
+    <div class="close_btn" id="closeMenu" onclick="closePages(this)"></div>
     <div class="">About </div>
     <div class=""> Discover </div>
     <div class="">Get Started </div>
@@ -286,7 +286,7 @@
       an email once <br>
        our campaign is completed.</p>
     </div>
-    <button type="button" class="button" id="got_it" onclick="closepages(this)">Got it!</button>
+    <button type="button" class="button" id="got_it" onclick="closePages(this)">Got it!</button>
   </div>
 </div>
 
@@ -295,10 +295,17 @@
 
 <script>
   document.getElementById('myForm').addEventListener("change",function(e){
+
     let target = e.target;
 
                 let x = target.id;
+switch (x) {
+  case 'expression':
 
+    break;
+  default:
+
+}
                 if (x=="a") {
         document.getElementById('input_1').style.border = "1px solid var(--moderateCyan)";
 
@@ -332,18 +339,19 @@
 
 });
 
-document.getElementById('menu').addEventListener("click",function(e){
+document.getElementById('myForm').addEventListener("click",function(e){
+
   let target = e.target;
 
-              let x = target.id;
-              console.log(x);
+            let x = target.id;
+               console.log(x);
               switch (x) {
-                case 'openMenu': document.getElementById('myNav').style.display = "block";
+                case 'submit': e.preventDefault();
+                document.getElementById('thanks').style.display = "block";
 
                   break;
-                  case 'closeMenu':document.getElementById('myNav').style.display = "none";
 
-                    break;
+
 }
 });
 </script>
