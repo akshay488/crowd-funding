@@ -1,5 +1,5 @@
 
-// bkmk function
+
 function openPages(ele){
   var x = ele.id;
 switch (x) {
@@ -10,13 +10,9 @@ switch (x) {
     case 'openMenu': document.getElementById('myNav').style.display = "block";
 
       break;
+      }
 
-
-
-
-}
-
-}
+    }
 
 function closePages(ele){
   var x = ele.id;
@@ -25,19 +21,9 @@ case 'got_it':
               document.getElementById('thanks').style.display = "none";
 
   break;
-  case 'closeMenu':document.getElementById('myNav').style.display = "none";
+case 'closeMenu':  document.getElementById('myNav').style.display = "none";
+                  
+  break;
 
-    break;
-
-
-
-
+    }
 }
-
-}
-
-
-
- // let x = window.innerWidth ||
- //  document.documentElement.clientWidth ||
- //  document.body.clientWidth;

@@ -61,8 +61,9 @@
   }
   .nav-block div:hover{
     transform: none;
-    background-color: #aaa;
+    background-color: #ddd;
     color: #fff;
+    border-radius: 10px;
   }
   .nav-block div:last-child{
     border:none;
@@ -113,6 +114,9 @@
   .hd1 p{
     text-align: left;
   }
+  .pledge .reward {
+   grid-column:1/span 3;
+   grid-row: 4/4;}
   /* form quries */
   .pledges{
 

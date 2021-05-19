@@ -67,8 +67,8 @@
         </div>
 
       <button type="button" class="button backing" id="form" onclick="openPages(this)">Back this project</button>
-      <div class="bkmk_btn">
-        <div class="bkmk" >
+      <div class="bkmk_btn" id="bkmk" onclick="myFunction()">
+        <div class="bkmk">
 
         </div>
         <p >Bookmark</p>
@@ -160,8 +160,7 @@
 
 <!-- pledge form -->
 <div id="myForm" class="template" >
-  <form  class="form-container" action="doSomeThing.php" method="post"
-  onSubmit="myButton.disabled = true; return true;">
+  <form  class="form-container" action="doSomeThing.php" method="post">
 
 <div>
 <div class="close_btn" id="close_btn" onclick="closePages(this)">
@@ -213,7 +212,7 @@
    <div class="list-4" id="enter_0">
     <input type="text"  class="inpuText" placeholder="Enter your pledge.." name="text">
     <input type="number" name="pledge" class="number-input" value="25" min="25">
-    <button  class="button" type="submit" id="submit" onclick="openPages(this)">continue</button>
+    <button  class="button" type="submit" id="submit_25" onclick="openPages(this)">continue</button>
   </div>
   </div>
   <!-- card_3 -->
@@ -239,7 +238,7 @@
         <input type="text" name="text" class="inpuText" placeholder="Enter your pledge..">
 
          <input type="number" name="pledge" value="75" min="75">
-         <button  class="button" type="submit" id="submit" onclick="openPages(this)">continue</button>
+         <button  class="button" type="submit" id="submit_75" onclick="openPages(this)">continue</button>
        </div>
    </div>
 
@@ -262,7 +261,7 @@
    <div class="list-4">
     <input type="text" class="inpuText" placeholder="Enter your pledge.." name="text">
      <input type="number" name="pledge" value="200" min="200">
-     <button  name="myButton" type="submit" id="submit" onclick="openPages(this)">continue</button>
+     <button  name="myButton" type="submit" id="submit_200" onclick="openPages(this)">continue</button>
    </div>
 
    </div>
@@ -344,16 +343,40 @@ document.getElementById('myForm').addEventListener("click",function(e){
   let target = e.target;
 
             let x = target.id;
-               console.log(x);
+
               switch (x) {
-                case 'submit': e.preventDefault();
+                case 'submit_25':
+                case 'submit_75':
+                case 'submit_101': e.preventDefault();
                 document.getElementById('thanks').style.display = "block";
 
                   break;
+                  case 'close_btn':  document.getElementById('myForm').style.display = "none";
 
+                    break;
 
 }
 });
+
+// bkmk function
+
+var add  =(function(){var counter = 0; return function (){
+counter += 1; return counter;}
+})();
+function myFunction(){
+  var i= add();
+  if (i% 2 != 0 ) {
+    var c = document.getElementById("bkmk").children;
+      c[0].style.backgroundImage = "url(images/bkmk-cyan.svg)";
+      c[1].style.color = "var(--moderateCyan)";
+  }else {
+    var c = document.getElementById("bkmk").children;
+      c[0].style.backgroundImage = "url(images/icon-bookmark.svg)";
+      c[1].style.color = "black";
+  }
+}
+
+
 </script>
 
 </body>
