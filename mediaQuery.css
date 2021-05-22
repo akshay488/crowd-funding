@@ -1,47 +1,37 @@
 
 @media screen and (max-width:789px) {
+
+
+  h1,h2,h3{
+    font-size:3vw;
+  }
+
+
+  p,.button,
+  .grey_button{
+    font-size: 2vw;
+
+  }
   header{
     background: url(images/image-hero-mobile.jpg);
     background-repeat: no-repeat;
     background-size:cover;
     height:80vw;
   }
-  .menu .menu_btn,
-  .nav-block .close_btn{
-    display:block;
-  }
 
-  .menu .menu_btn{
 
-    background: url(images/icon-hamburger.svg);
-    background-repeat: no-repeat;
-    background-size:contain;
-    cursor: pointer;
-    width:5vw;
-    height: 5vw;
 
-  }
-  .nav-block{
+  .myNav{
     position: relative;
   }
-  .nav-block .close_btn{
-    background: url(images/icon-close-modal.svg);
-    background-repeat: no-repeat;
-    background-size:contain;
-    position: fixed;
-    top:10px;
-    right: 10px;
-    cursor: pointer;
-    width:20px;
-    height:20px;
-
-  }
-
-
+  .menu .menu_btn{
+    display: block;
+ }
   .nav .menu{
     width:auto;
   }
-  .nav-block{
+  .myNav{
+    flex-direction: column;
     position: fixed;
     top:15%;
     left:35%;
@@ -52,28 +42,38 @@
     color: #aaa;
     background-color: #fff;
     border-radius: 10px;
-    display:none;
+  }
+  .myNav .close_btn{
+    display: block;
 
   }
-  .nav-block div{
+
+.myNav a{
+    display: block;
     border-bottom: 1px solid #ddd;
     padding:2rem;
+    color: #333;
   }
-  .nav-block div:hover{
+  .myNav a:hover{
     transform: none;
     background-color: #ddd;
     color: #fff;
     border-radius: 10px;
   }
-  .nav-block div:last-child{
+  .myNav a:last-child{
     border:none;
   }
-  .nav-block div:first-child{
+  .myNav a:first-child{
 
     border:none;
     padding: 0;
   }
-
+  .close{
+    display: none;
+  }
+  .open{
+    display:block;
+  }
   /* stats */
 
   .stats-container{
@@ -123,10 +123,7 @@
     grid-template-rows:repeat(3, auto);
   }
   .form_label{
-    display:inline-flex;
     flex-direction: column;
-    gap:10px;
-
   }
   .list-1{
     grid-column: 1/span 4;
@@ -147,13 +144,21 @@
   }
   /* main quries */
   .main .bkmk_btn{
-    width: 5vw;
-    height:5vw;
+
+    width: 7vh;
+    height: 7vh;
     border-radius: 50%;
     grid-column: 4/4;
     grid-row: 4/4;
   }
-  .bkmk_btn>p{
+  .bkmk{
+    width: 70%;
+
+    width: 7vh;
+    height: 7vh;
+  }
+
+  .bkmk_btn>a{
     display: none;
 }
   .main .backing{

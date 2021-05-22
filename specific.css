@@ -23,22 +23,22 @@ label::before{
   content:"";
   width: 30px;
   height:30px;
-  border: 2px solid #ddd;;
+  border: 2px solid #ddd;
   display: inline-block;
-  margin: -8px 20px;
+  margin: -7px 20px;
   margin-left: 0;
   border-radius: 50%;
 }
 label::after{
   content:"";
   position: absolute;
-  left: 5px;
-  top:10px;
-  width: 20px;
-  height: 20px;
+  left: 7.4px;
+  top:22px;
+  width: 15px;
+  height: 15px;
   background-color:var(--moderateCyan);
   display: inline-block;
-  margin: -7.5px 20px;
+  margin: -8.2px 20px;
   margin-left: 0;
   border-radius: 50%;
   opacity:0;
@@ -122,6 +122,7 @@ position: relative;
   grid-row:1/1;
 }
 .list-2{
+  padding-left: 5vw;
 grid-column: 1/span 4;
 grid-row:2/2;
 }
@@ -179,8 +180,7 @@ border-top: 1px solid #ddd;
   background-color: var(--moderateCyan); /* Green */
   border: none;
   color: white;
-  padding: 20px;
-  font-size: 1.4vh;
+  padding:  15px;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
@@ -191,8 +191,8 @@ border-top: 1px solid #ddd;
 background-color:#aaa;
 border: none;
 color: white;
-padding: 20px;
-font-size: 1.4vw;
+padding: 15px;
+
 text-align: center;
 text-decoration: none;
 cursor: pointer;
@@ -231,7 +231,7 @@ input[type=number] {
 
 input[type="number"]{
 display:inline-block;
-padding:20px;
+padding:15px;
 font-size: 1.5rem;
   width:15%;
 background-image: url(images/doller.png);
