@@ -32,10 +32,10 @@ label::before{
 label::after{
   content:"";
   position: absolute;
-  left: 7.4px;
+  left: 5px;
   top:22px;
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
   background-color:var(--moderateCyan);
   display: inline-block;
   margin: -8.2px 20px;
